@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Pursula_5</string>
+    <string name="logIn">Log In</string>
+    <string name="register">Register</string>
+    <string name="Pur">Pursula</string>
+    <string name="user_name">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="confirm_password">Confirmar contraseña</string>
+    <string name="send">Enviar</string>
+    <string name="phone">Numero celular</string>
+    <string name="mail">Correo electronico</string>
+    <string name="names">Lizzete Cruz Rodriguez, Vicente Ivan Ruiz Garcia, Leobardo Mora Castillo</string>
+    <string name="latest_data">Ultimos datos</string>
+    <string name="historical">Historicos</string>
+    <string name="alerts">Alertas</string>
+    <string name="log_out">Log out</string>
+    <string name="table">Tabla</string>
+    <string name="graph">Grafica</string>
+    <string name="dropdown">Desplegable</string>
+    <string name="possible_alerts">Posibles alertas</string>
+    <string name="previous_alerts">Alertas anteriores</string>
+    <string name="recommended_checkups">Chequeos recomendados</string>
+</resources>
