@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">FinalClockApplication</string>
+
+    <!-- Log In String  -->
+    <string name="pur">Pursula</string>
+    <string name="user_name">User</string>
+    <string name="password">Contraseña</string>
+    <string name="logIn">Log In</string>
+    <string name="register">Register</string>
+
+    <!-- Register String  -->
+    <string name="confirm_password">Confirmar contraseña</string>
+    <string name="phone">Teléfono</string>
+    <string name="mail">Correo</string>
+    <string name="send">Enviar</string>
+
+
+    <!-- HomeActivity String  -->
+    <string name="latest_data">Últimos datos</string>
+    <string name="historical">Históricos</string>
+    <string name="alerts">Alertas</string>
+    <string name="log_out">Log Out</string>
+    <string name="names">Lizette Cruz Rodriguez, Vicente Ivan Ruiz Garcia, Leobardo Mora Castillo</string>
+
+    <!-- AlertasActivity String  -->
+    <string name="possible_alerts">Alertas</string>
+    <string name="previous_alerts">Alertas anteriores</string>
+    <string name="recommended_checkups">Chequeos recomendados</string>
+
+    <!-- HistoricosActivity String  -->
+    <string name="dropdown">Desplegable</string>
+    <string name="table">Tabla</string>
+    <string name="graph">Gráfica</string>
+
+
+    
+
+</resources>
