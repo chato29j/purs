@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_app"
-    tools:context=".Home.UtData.UtDataActivity">
+    tools:context=".Home.UtData.UtDataGraphActivity">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/viewTitle_3"
+        android:id="@+id/viewTitle_6"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
@@ -29,7 +29,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/latest_data"
+                android:text="@string/graph"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="32sp"
@@ -39,76 +39,34 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/viewTable"
+        android:id="@+id/viewDatos"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="32dp"
-        app:cardBackgroundColor="@color/background_component"
+        android:layout_height="0dp"
         app:cardCornerRadius="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="35dp"
+        android:layout_marginHorizontal="15dp"
+        app:cardBackgroundColor="@color/background_component"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewTitle_3">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewTitle_6"
+        app:layout_constraintBottom_toTopOf="@id/viewButtons">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/table"
-                android:textStyle="bold"
-                android:textSize="30sp"
-                android:textAllCaps="true"
-                android:textColor="@color/title_text" />
-
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"/>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/viewGraph"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="32sp"
-        app:cardBackgroundColor="@color/background_component"
-        app:cardCornerRadius="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewTable">
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/graph"
-                android:textStyle="bold"
-                android:textSize="30sp"
-                android:textAllCaps="true"
-                android:textColor="@color/title_text" />
-
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
+        android:id="@+id/viewButtons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30sp"
         app:cardBackgroundColor="@color/background_component"
         app:cardCornerRadius="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/viewData_1"
+        app:layout_constraintBottom_toTopOf="@+id/viewData_4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -120,55 +78,41 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/btnHome"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:id="@+id/btnBack_2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_margin="10dp"
                 android:background="@color/background_fab"
-                android:src="@drawable/ic_home"
                 android:scaleType="centerInside"
-                app:tint="@color/white"
-                />
+                android:src="@drawable/ic_back"
+                app:tint="@color/white" />
 
             <ImageButton
-                android:id="@+id/btnHistorical"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:id="@+id/btnSave"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_margin="10dp"
                 android:background="@color/background_fab"
-                android:src="@drawable/ic_historicos"
                 android:scaleType="centerInside"
-                app:tint="@color/white"
-                />
+                android:src="@drawable/ic_graph"
+                app:tint="@color/white" />
 
             <ImageButton
-                android:id="@+id/btnAlert"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:id="@+id/btnUtTable"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_margin="10dp"
                 android:background="@color/background_fab"
-                android:src="@drawable/ic_alertas"
                 android:scaleType="centerInside"
-                app:tint="@color/white"
-                />
-
-            <ImageButton
-                android:id="@+id/btnNext"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_margin="10dp"
-                android:background="@color/background_fab"
                 android:src="@drawable/ic_next"
-                android:scaleType="centerInside"
-                app:tint="@color/white"
-                />
+                app:tint="@color/white" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/viewData_1"
+        android:id="@+id/viewData_4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
@@ -193,7 +137,7 @@
                 android:textColor="@color/white"
                 android:textSize="8sp"
                 android:textStyle="bold"
-                />
+                tools:ignore="SmallSp" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.cardview.widget.CardView>
 

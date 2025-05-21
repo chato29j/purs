@@ -27,12 +27,13 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tvText_T"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/pur"
+                tools:text="@string/pur"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
-                android:textSize="32sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.cardview.widget.CardView>
@@ -122,7 +123,7 @@
         app:cardCornerRadius="16dp"
         app:cardBackgroundColor="@color/background_component"
         app:layout_constraintTop_toBottomOf="@id/viewUtData"
-        app:layout_constraintBottom_toTopOf="@id/viewData"
+        app:layout_constraintBottom_toTopOf="@id/LayoutBle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/viewLogOut"
         android:layout_margin="8dp">
@@ -220,5 +221,35 @@
                 />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/LayoutBle"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/viewData"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Spinner
+            android:id="@+id/spinnerDevices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/statusIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Desconectado"
+            android:gravity="center"
+            android:background="@android:color/holo_red_light"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

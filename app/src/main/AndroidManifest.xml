@@ -2,6 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,25 +23,41 @@
         android:theme="@style/Theme.FinalClockApplication"
         tools:targetApi="31">
         <activity
-            android:name=".Home.UtData.UtDataActivity"
+            android:name=".Home.Historicos.HistoricosGraphActivity"
             android:exported="false"
             android:theme="@style/Theme.ClockApp"/>
+        <activity
+            android:name=".Home.Historicos.HistoricosTableActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClockApp"/>
+        <activity
+            android:name=".Home.UtData.UtDataGraphActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClockApp"/>
+        <activity
+            android:name=".Home.UtData.UtDataTableActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClockApp"/>
+        <activity
+            android:name=".Home.UtData.UtDataActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClockApp" />
         <activity
             android:name=".Home.Historicos.HistoricosActivity"
             android:exported="false"
-            android:theme="@style/Theme.ClockApp"/>
+            android:theme="@style/Theme.ClockApp" />
         <activity
             android:name=".Home.Alertas.AlertasActivity"
             android:exported="false"
-            android:theme="@style/Theme.ClockApp"/>
+            android:theme="@style/Theme.ClockApp" />
         <activity
             android:name=".Home.HomeActivity"
             android:exported="false"
-            android:theme="@style/Theme.ClockApp"/>
+            android:theme="@style/Theme.ClockApp" />
         <activity
             android:name=".Register.RegisterActivity"
             android:exported="false"
-            android:theme="@style/Theme.ClockApp"/>
+            android:theme="@style/Theme.ClockApp" />
         <activity
             android:name=".LogInActivity"
             android:exported="true"

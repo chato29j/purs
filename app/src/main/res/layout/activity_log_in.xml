@@ -82,6 +82,15 @@
                 android:backgroundTint="@color/white"
                 />
 
+            <Button
+                android:id="@+id/btnForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/background_component"
+                android:text="@string/forgot_password"
+                />
+
+
         </LinearLayout>
 
 

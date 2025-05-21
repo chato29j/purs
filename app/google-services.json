@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "721485506020",
+    "project_id": "finalclock-63a61",
+    "storage_bucket": "finalclock-63a61.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721485506020:android:a84eaf44b159d718c013f1",
+        "android_client_info": {
+          "package_name": "com.example.finalclockapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-vzrGCFxI8-5KM1ghcOQIjY8G3tqfjtE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

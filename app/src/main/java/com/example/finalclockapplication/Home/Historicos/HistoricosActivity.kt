@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.finalclockapplication.Home.Alertas.AlertasActivity
@@ -19,13 +20,18 @@ class HistoricosActivity : AppCompatActivity() {
     private lateinit var btnHome: ImageButton
     private lateinit var btnAlertas: ImageButton
     private lateinit var btnNext: ImageButton
+    private lateinit var viewTable_1: CardView
+    private lateinit var viewGraph_1: CardView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_historicos)
+
         initComponents()
         initListeners()
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -38,6 +44,8 @@ class HistoricosActivity : AppCompatActivity() {
         btnHome = findViewById(R.id.btnHome_1)
         btnAlertas = findViewById(R.id.btnAlertas_1)
         btnNext = findViewById(R.id.btnNext_1)
+        viewTable_1 = findViewById(R.id.viewTable_1)
+        viewGraph_1 = findViewById(R.id.viewGraph_1)
     }
 
     private fun initListeners() {
@@ -56,6 +64,22 @@ class HistoricosActivity : AppCompatActivity() {
         btnNext.setOnClickListener {
             navigateToAlertas()
         }
+        viewTable_1.setOnClickListener {
+            navigateToHistoricosTable()
+        }
+        viewGraph_1.setOnClickListener {
+            navigateToHistoricosGraph()
+        }
+    }
+
+    private fun navigateToHistoricosGraph() {
+        val intent = Intent(this, HistoricosGraphActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToHistoricosTable() {
+        val intent = Intent(this, HistoricosTableActivity::class.java)
+        startActivity(intent)
     }
 
     private fun navigateToHome(){

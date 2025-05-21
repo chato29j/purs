@@ -7,12 +7,14 @@
     <string name="password">Contraseña</string>
     <string name="logIn">Log In</string>
     <string name="register">Register</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
 
     <!-- Register String  -->
     <string name="confirm_password">Confirmar contraseña</string>
     <string name="phone">Teléfono</string>
     <string name="mail">Correo</string>
     <string name="send">Enviar</string>
+    <string name="back">Regresar</string>
 
 
     <!-- HomeActivity String  -->
@@ -32,7 +34,11 @@
     <string name="table">Tabla</string>
     <string name="graph">Gráfica</string>
 
+    <!-- TableActivity String  -->
+    <string name="intermediate_levels">Niveles intermedios</string>
+    <string name="low_levels">Niveles normales</string>
+    <string name="high_levels">Niveles críticos</string>
 
-    
+
 
 </resources>

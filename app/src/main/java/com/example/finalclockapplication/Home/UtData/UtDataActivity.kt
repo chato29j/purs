@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.finalclockapplication.Home.Alertas.AlertasActivity
@@ -19,6 +20,8 @@ class UtDataActivity : AppCompatActivity() {
     private lateinit var btnHistorical: ImageButton
     private lateinit var btnAlert: ImageButton
     private lateinit var btnNext: ImageButton
+    private lateinit var viewTable: CardView
+    private lateinit var viewGraph: CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +42,8 @@ class UtDataActivity : AppCompatActivity() {
         btnHistorical = findViewById(R.id.btnHistorical)
         btnAlert = findViewById(R.id.btnAlert)
         btnNext = findViewById(R.id.btnNext)
+        viewTable = findViewById(R.id.viewTable)
+        viewGraph = findViewById(R.id.viewGraph)
     }
 
     private fun initListeners() {
@@ -54,6 +59,22 @@ class UtDataActivity : AppCompatActivity() {
         btnNext.setOnClickListener {
             navigateToHistorical()
         }
+        viewGraph.setOnClickListener {
+            navigateToGraph()
+        }
+        viewTable.setOnClickListener {
+            navigateToTable()
+        }
+    }
+
+    private fun navigateToTable() {
+        val intent = Intent(this, UtDataTableActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToGraph() {
+        val intent = Intent(this, UtDataGraphActivity::class.java)
+        startActivity(intent)
     }
 
     private fun navigateToHome(){
